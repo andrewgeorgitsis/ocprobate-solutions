@@ -379,7 +379,7 @@ write("/styles.css",CSS)
 write("/img/headshot-placeholder.svg","""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 150" role="img" aria-label="Headshot placeholder"><rect width="120" height="150" fill="#E3E9E4"/><circle cx="60" cy="58" r="24" fill="#B7C9BE"/><path d="M18 150c4-32 22-46 42-46s38 14 42 46z" fill="#B7C9BE"/><text x="60" y="140" font-family="Georgia,serif" font-size="9" fill="#1F3D33" text-anchor="middle">Photo coming</text></svg>""")
 write("/config.js","""// Contact-form endpoint. Posts JSON to the in-house /api/lead serverless function,
 // which files the lead in the Lead To Close CRM (tagged `probate`, assigned to Vennessa).
-window.SITE_CONFIG = { formEndpoint: "/api/lead" };
+window.SITE_CONFIG = { formEndpoint: "/api/lead/" };
 """)
 urls=["/","/guide/","/faq/","/orange-county/","/resources/","/resources/executor-checklist/","/resources/probate-timeline/","/contact/"]+[f"/guide/{g['slug']}/" for g in GUIDES]+[f"/orange-county/{s}/" for s,_,_ in CITIES]
 write("/sitemap.xml",'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+"".join(f"<url><loc>{SITE}{u}</loc><lastmod>2026-09-01</lastmod></url>\n" for u in urls)+"</urlset>\n")
