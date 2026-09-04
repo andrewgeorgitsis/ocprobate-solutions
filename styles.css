@@ -148,5 +148,10 @@ footer.bottom a{color:var(--soft)}
 .netline span:last-child{font-weight:600;font-variant-numeric:tabular-nums}
 .accentbox{border-color:var(--sage)!important;background:linear-gradient(180deg,var(--sand-2),var(--panel))}
 .toolgrid li a b{font-size:1.06rem}
+.comps{width:100%;border-collapse:collapse;font-size:.92rem}
+.comps th{text-align:left;color:var(--muted);font-weight:600;padding:.5rem;border-bottom:1px solid var(--hair);white-space:nowrap}
+.comps td{padding:.5rem;border-bottom:1px solid var(--hair);white-space:nowrap}
+.glossary dt{font-weight:600;color:var(--pine);margin-top:1.15rem;font-size:1.02rem}
+.glossary dd{margin:.3rem 0 0;padding:0;color:var(--soft)}
 @media(max-width:640px){.trow{flex-direction:column}.g3{grid-template-columns:1fr 1fr}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}

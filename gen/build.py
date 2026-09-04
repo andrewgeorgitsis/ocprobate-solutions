@@ -161,6 +161,11 @@ footer.bottom a{color:var(--soft)}
 .netline span:last-child{font-weight:600;font-variant-numeric:tabular-nums}
 .accentbox{border-color:var(--sage)!important;background:linear-gradient(180deg,var(--sand-2),var(--panel))}
 .toolgrid li a b{font-size:1.06rem}
+.comps{width:100%;border-collapse:collapse;font-size:.92rem}
+.comps th{text-align:left;color:var(--muted);font-weight:600;padding:.5rem;border-bottom:1px solid var(--hair);white-space:nowrap}
+.comps td{padding:.5rem;border-bottom:1px solid var(--hair);white-space:nowrap}
+.glossary dt{font-weight:600;color:var(--pine);margin-top:1.15rem;font-size:1.02rem}
+.glossary dd{margin:.3rem 0 0;padding:0;color:var(--soft)}
 @media(max-width:640px){.trow{flex-direction:column}.g3{grid-template-columns:1fr 1fr}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 """
@@ -454,7 +459,7 @@ window.SITE_CONFIG = { formEndpoint: "/api/lead/" };
 from tools import emit_tools
 emit_tools(page, schema, PERSON, ASIDE)
 
-urls=["/","/guide/","/tools/","/tools/home-value/","/tools/market-analysis/","/tools/mortgage-calculator/","/tools/dscr-calculator/","/tools/find-a-home/","/faq/","/orange-county/","/resources/","/resources/executor-checklist/","/resources/probate-timeline/","/contact/"]+[f"/guide/{g['slug']}/" for g in GUIDES]+[f"/orange-county/{s}/" for s,_,_ in CITIES]
+urls=["/","/guide/","/tools/","/tools/home-value/","/tools/market-analysis/","/tools/mortgage-calculator/","/tools/dscr-calculator/","/tools/find-a-home/","/glossary/","/faq/","/orange-county/","/resources/","/resources/executor-checklist/","/resources/probate-timeline/","/contact/"]+[f"/guide/{g['slug']}/" for g in GUIDES]+[f"/orange-county/{s}/" for s,_,_ in CITIES]
 write("/sitemap.xml",'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+"".join(f"<url><loc>{SITE}{u}</loc><lastmod>2026-09-01</lastmod></url>\n" for u in urls)+"</urlset>\n")
 write("/robots.txt",f"User-agent: *\nAllow: /\nSitemap: {SITE}/sitemap.xml\n")
 write("/llms.txt",f"""# OC Probate Solutions
