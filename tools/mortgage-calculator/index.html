@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mortgage calculator | Vennessa Mele</title>
+<meta name="description" content="Free mortgage calculator — estimate the full monthly payment (principal, interest, taxes, and insurance) for keeping or buying an Orange County home.">
+<link rel="canonical" href="https://ocprobate.solutions/tools/mortgage-calculator/">
+<meta property="og:title" content="Mortgage calculator | Vennessa Mele">
+<meta property="og:description" content="Free mortgage calculator — estimate the full monthly payment (principal, interest, taxes, and insurance) for keeping or buying an Orange County home.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ocprobate.solutions/tools/mortgage-calculator/">
+<meta property="og:site_name" content="OC Probate Solutions">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "RealEstateAgent", "@id": "https://ocprobate.solutions/#vennessa", "name": "Vennessa Mele", "url": "https://ocprobate.solutions", "telephone": "+19513133816", "email": "vennessamele@gmail.com", "identifier": {"@type": "PropertyValue", "propertyID": "California DRE License", "value": "02115354"}, "areaServed": {"@type": "AdministrativeArea", "name": "Orange County, California"}, "knowsAbout": ["Probate real estate", "Inherited property sales", "Court confirmation sales", "Estate sales"], "worksFor": {"@type": "RealEstateAgent", "name": "Cosine Realty", "identifier": {"@type": "PropertyValue", "propertyID": "California DRE License", "value": "01976619"}}}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="/">OC Probate Solutions<small>Vennessa Mele, Realtor · Orange County</small></a>
+<nav class="main" aria-label="Main"><a href="/guide/">Guides</a><a href="/tools/" aria-current="page">Tools</a><a href="/faq/">Questions</a><a href="/orange-county/">Cities</a><a href="/resources/">Resources</a><a href="/contact/">Contact</a></nav>
+</div></header>
+<main><div class="wrap">
+<span class="eyebrow">Free · instant</span><h1>Mortgage calculator</h1><p class="lede">For an heir who wants to keep the home, or a buyer sizing up a purchase — estimate the full monthly payment, including property taxes and insurance.</p><div class="tool"><div class="g3"><div><label>Home price</label><input id="price" type="number" inputmode="numeric" value="900000" oninput="calc()"></div><div><label>Down payment %</label><input id="down" type="number" step="1" value="20" oninput="calc()"></div><div><label>Interest rate %</label><input id="rate" type="number" step="0.01" value="6.75" oninput="calc()"></div></div><div class="g3" style="margin-top:.9rem"><div><label>Loan term (years)</label><input id="term" type="number" step="1" value="30" oninput="calc()"></div><div><label>Property tax %/yr</label><input id="tax" type="number" step="0.01" value="1.1" oninput="calc()"></div><div><label>Insurance $/yr</label><input id="ins" type="number" inputmode="numeric" value="1800" oninput="calc()"></div></div><div id="breakdown" style="margin-top:1rem"></div><div class="result" id="pay">—</div><div class="note">Estimated total monthly payment (principal, interest, taxes &amp; insurance).</div></div><p class="note">Estimate only; excludes HOA, PMI, and Mello-Roos. Confirm figures with your lender.</p><script>(function(){var SUPA="https://jqbtbftwmlkikvpwyqgv.supabase.co",ANON="sb_publishable_JD2RtlMt2pg13lZzmP4Cug_xxLGXfSd",EMAILTO="vennessamele@gmail.com";var $=function(i){return document.getElementById(i);};var money=function(n){return (n||n===0)?"$"+Math.round(Number(n)).toLocaleString("en-US"):"\u2014";};var num=function(i){var v=parseFloat(String($(i).value).replace(/[,$\s%]/g,""));return isNaN(v)?0:v;};window.calc=function(){var price=num("price"),downPct=num("down"),rate=num("rate"),term=num("term"),taxPct=num("tax"),ins=num("ins");if(!price){$("pay").textContent="\u2014";$("breakdown").innerHTML="";return;}var loan=price*(1-downPct/100);var i=rate/100/12;var n=Math.max(1,Math.round(term*12));var pi=i>0?loan*(i*Math.pow(1+i,n))/(Math.pow(1+i,n)-1):loan/n;var tax=price*(taxPct/100)/12;var insM=ins/12;var total=pi+tax+insM;var line=function(k,v){return '<div class="netline"><span>'+k+'</span><span>'+money(v)+'</span></div>';};$("breakdown").innerHTML=line("Loan amount",loan)+line("Principal & interest",pi)+line("Property taxes",tax)+line("Insurance",insM);$("pay").textContent=money(total)+"/mo";};window.calc();})();</script>
+</div></main>
+<footer class="bottom"><div class="wrap">
+<p>Vennessa Mele, California real estate salesperson, DRE #02115354, licensed under Cosine Realty, DRE #01976619. (951) 313-3816 · <a href="mailto:vennessamele@gmail.com">vennessamele@gmail.com</a></p>
+<p>This site explains how probate real estate works in Orange County so that executors and heirs can make informed decisions. It is not legal, tax, or financial advice. Figures such as thresholds, fees, and deadlines change; verify current numbers with your attorney or the court. Content last reviewed September 2026.</p>
+<p><a href="/guide/">Guides</a> · <a href="/faq/">Questions</a> · <a href="/orange-county/">Cities</a> · <a href="/resources/">Resources</a> · <a href="/contact/">Contact</a> · <a href="/privacy/">Privacy</a></p>
+</div></footer>
+</body></html>
