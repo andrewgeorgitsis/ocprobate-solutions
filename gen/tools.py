@@ -296,7 +296,7 @@ def emit_tools(page, schema, PERSON, ASIDE):
     )
     page("/glossary/", "Probate terms & definitions — a plain-English glossary | " + NAME,
          "Plain-English definitions of California probate real-estate terms for executors and heirs: Letters, full vs. limited authority, overbid, court confirmation, stepped-up basis, and more.",
-         glossary, gl_schema + schema(PERSON), current="/tools/")
+         glossary, gl_schema + schema(PERSON), current="/glossary/")
 
 
 def _strip(html_str):

@@ -184,7 +184,7 @@ def schema(obj):
     return '<script type="application/ld+json">'+json.dumps({"@context":"https://schema.org",**obj},ensure_ascii=False)+'</script>'
 
 # ------------------------------------------------------------------ LAYOUT
-NAV = [("/guide/","Guides"),("/tools/","Tools"),("/faq/","Questions"),("/orange-county/","Cities"),("/resources/","Resources"),("/contact/","Contact")]
+NAV = [("/guide/","Guides"),("/tools/","Tools"),("/faq/","Questions"),("/glossary/","Glossary"),("/orange-county/","Cities"),("/resources/","Resources"),("/contact/","Contact")]
 
 def page(path, title, desc, body, extra_head="", canonical=None, current=None):
     nav = "".join(f'<a href="{h}"{" aria-current=\"page\"" if h==current else ""}>{t}</a>' for h,t in NAV)
